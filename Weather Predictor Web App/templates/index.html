@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>See how worth it is to have a Solar Panel in your city</title>
+    <style>
+      body {
+        background-color: #EAE7DD;
+        font-family: Arial, sans-serif;
+      }
+
+      h1 {
+        text-align: center;
+        margin-top: 50px;
+        font-size: 48px;
+        color: #99775C;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 50px;
+      }
+
+      label {
+        font-size: 24px;
+        color: #99775C;
+        margin-bottom: 10px;
+      }
+
+      input[type="text"] {
+        padding: 10px;
+        border-radius: 5px;
+        border: none;
+        font-size: 16px;
+        width: 300px;
+        margin-bottom: 20px;
+        background-color: #fff;
+        color: #222;
+      }
+
+      input[type="submit"] {
+        padding: 10px 20px;
+        border-radius: 5px;
+        background-color: #99775C;
+        color: #fff;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+      }
+
+      input[type="submit"]:hover {
+        background-color: #845C40;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Is it worth it to have a solar panel in your city ?</h2>
+    <form method="POST" action="{{ url_for('predict') }}">
+      <label for="city">Your City:</label>
+      <input type="text" id="city" name="city">
+      <input type="submit" value="Predict">
+    </form>
+  </body>
+</html>

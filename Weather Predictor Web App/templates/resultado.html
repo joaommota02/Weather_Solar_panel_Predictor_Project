@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Weather Predictor - Result</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #EAE7DD;
+        color: #99775C;
+      }
+
+      #container {
+        width: 60%;
+        margin: auto;
+        padding: 20px;
+        background-color: #FFFFFF;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px #888888;
+      }
+
+      h1 {
+        font-size: 2em;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      h2 {
+        font-size: 1.5em;
+        margin-top: 30px;
+        margin-bottom: 10px;
+      }
+
+      p {
+        font-size: 1.2em;
+        margin: 10px 0px;
+      }
+
+      button {
+        background-color: #99775C;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        float: right;
+      }
+
+      button:hover {
+        background-color: #8C6E53;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <h1>Weather conditions for {{ city }}</h1>
+      <p>Hours of sun: {{ hours_of_sun|round(1) }} Hours</p>
+      <p>Temperature: {{ temperature|round(1) }} °C</p>
+      <p>Humidity: {{ humidity|round(1) }} %</p>
+      <p>Precipitation: {{ precip|round(1) }} mm</p>
+      <p>Cloud cover: {{ cloudcover|round(1) }} %</p>
+      <h2>Solar Panel Savings</h2>
+      <p>Energy price: {{ energy_price_eur_kwh|round(2) }} €/kWh</p>
+      <p>Solar panel power: {{ solar_panel_power_kwh|round(2) }} kWh</p>
+      <p>Monthly energy produced by the solar panel: {{ monthly_energy_produced_kwh|round(2) }} kWh</p>
+      <p>Monthly energy cosumption: {{ montlhy_energy_cost_eur|round(2) }} €</p>
+      <p>Montlhy money saved with the solar panel: {{ montlhy_solar_panel_cost_saved|round(2) }} €</p>
+      <p>Total saved: {{ money_saved|round(2) }} %</p>
+      <p>Solar panel price: {{ solar_panel_price|round(2) }} €</p>
+      <p>Years to pay the solar panel: {{ years_to_pay_the_solar_panel|round(2) }} anos</p>
+
+      <button onclick="window.location.href='/';">Back</button>
+    </div>
+  </body>
+</html>
